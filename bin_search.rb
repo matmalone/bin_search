@@ -1,6 +1,6 @@
 # recursive
 def bin_search_r(arr, value, first, last)
-  mid = ((last-first)/2+first).floor
+  mid = (last - first) / 2 + first
 
   if last-first < 0
     return nil 
@@ -21,7 +21,7 @@ end
 # iterative
 def bin_search(arr, value, first, last)
   while first <= last
-    mid = ((last-first)/2+first).floor
+    mid = (last - first) / 2 + first
 
     if arr[mid] == value
       return mid
