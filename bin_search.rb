@@ -2,10 +2,12 @@
 def bin_search_r(arr, value, first, last)
   mid = (last - first) / 2 + first
 
+  # not found
   if last < first
     return nil 
   end
 
+  # found
   if arr[mid] == value
     return mid
   end
@@ -23,6 +25,7 @@ def bin_search(arr, value, first, last)
   while first <= last
     mid = (last - first) / 2 + first
 
+    # found
     if arr[mid] == value
       return mid
     end
@@ -33,6 +36,8 @@ def bin_search(arr, value, first, last)
       last = last - 1
     end
   end
+
+  # not found
   return nil
 end
 
