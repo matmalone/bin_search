@@ -1,4 +1,5 @@
-def bin_search(arr, value, first, last)
+# recursive
+def bin_search_r(arr, value, first, last)
   mid = ((last-first)/2+first).floor
 
   if last-first < 0
@@ -16,7 +17,9 @@ def bin_search(arr, value, first, last)
   end
 end
 
-def bin_search_r(arr, value, first, last)
+
+# iterative
+def bin_search(arr, value, first, last)
   while first <= last
     mid = ((last-first)/2+first).floor
 
@@ -33,8 +36,14 @@ def bin_search_r(arr, value, first, last)
   return nil
 end
 
-arr = [1, 4, 5, 11]
 
-print "result: "
-print bin_search_r(arr, 111, 0, arr.length-1)
-puts "\n"
+arr = [1, 4, 5, 11]
+value = 4
+
+print "recursive result: "
+print bin_search_r(arr, value, 0, arr.length-1)
+print "\n"
+
+print "iterative result: "
+print bin_search(arr, value, 0, arr.length-1)
+print "\n"
