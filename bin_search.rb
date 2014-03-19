@@ -2,7 +2,7 @@
 def bin_search_r(arr, value, first, last)
   mid = (last - first) / 2 + first
 
-  if last-first < 0
+  if last < first
     return nil 
   end
 
