@@ -15,7 +15,7 @@ def bin_search_r(arr, value, first, last)
   if arr[mid] < value
     return bin_search_r(arr, value, mid+1, last)
   elsif arr[mid] > value
-    return bin_search_r(arr, value, first, last-1)
+    return bin_search_r(arr, value, first, mid-1)
   end
 end
 
